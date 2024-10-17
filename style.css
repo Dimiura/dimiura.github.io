@@ -1,0 +1,50 @@
+.background
+{
+    background-color:#101011;
+}
+
+h1, h2, h3, h4, p 
+{
+    color:#fff;
+}
+
+/* CSS de animação - Linha sublinhada em links e botões  */
+.hover-underline {
+    position: relative; 
+    display: inline-block; 
+  }
+
+  .hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    background-color: #fff; 
+    bottom: -5px; 
+    left: 0;
+    transition: width 0.4s ease-out;
+  }
+
+  .hover-underline:hover::after {
+    width: 100%; 
+  }
+
+
+
+/* Animações  */
+
+@keyframes fallFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }   
+      100% {
+        opacity: 1;
+        transform: translateY(0); 
+      }
+    }
+
+  
+  .fade-in-text {
+    animation: fallFadeIn 1s ease-out;
+  }
