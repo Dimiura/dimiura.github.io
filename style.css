@@ -8,11 +8,19 @@ h1, h2, h3, h4, p
     color:#fff;
 }
 
+h1
+{
+  font-size:52px;
+}
+
+
 /* CSS de animação - Linha sublinhada em links e botões  */
 .hover-underline {
     position: relative; 
     display: inline-block; 
   }
+
+  
 
   .hover-underline::after {
     content: '';
@@ -29,6 +37,37 @@ h1, h2, h3, h4, p
     width: 100%; 
   }
 
+/* Estilo da seta */
+.arrow {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem; /* Tamanho da seta */
+  color: #000; /* Cor da seta */
+}
+
+.arrow2 {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem; /* Tamanho da seta */
+  color: #000; /* Cor da seta */
+}
+/* Animação de subir e descer */
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateX(-50%) translateY(0);
+  }
+  50% {
+      transform: translateX(-50%) translateY(20px);
+  }
+}
 
 
 /* Animações  */
