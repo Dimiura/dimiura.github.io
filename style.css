@@ -14,13 +14,92 @@ h1
 }
 
 
-/* CSS de animação - Linha sublinhada em links e botões  */
+.nav-link:disabled {
+  background-color: #6c757d; 
+  color: #fff; 
+  cursor: not-allowed; 
+  opacity: 0.65; 
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden; 
+  background-size: cover;
+}
+
+.loader-container {
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  z-index: 1000; 
+}
+
+.fa-spinner {
+  font-size: 100px; 
+  color: #fff; 
+  animation: spin 1s linear infinite; 
+}
+
+
+.dots {
+  font-size: 64px;
+  color: #fff; 
+}
+
+.dot {
+  display: inline-block;
+  animation: blink 2s infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s; 
+
+}
+.dot:nth-child(3) {
+  animation-delay: 0.4s; 
+}
+
+
+
+
+p {
+  font-size: 18px;
+  color: #fff; 
+  margin-top: 20px;
+}
+
+#content {
+  display: none; 
+}
+
+
+.floating-circle {
+  width: 250px; 
+  height: 250px;
+  border-radius: 50%; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
+}
+
+.floating-circle img {
+  width: 100%; 
+  height: auto;
+}
+
+
 .hover-underline {
     position: relative; 
     display: inline-block; 
   }
 
-  
 
   .hover-underline::after {
     content: '';
@@ -37,14 +116,14 @@ h1
     width: 100%; 
   }
 
-/* Estilo da seta */
+
 .arrow {
   position: absolute;
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 3rem; /* Tamanho da seta */
-  color: #000; /* Cor da seta */
+  font-size: 3rem; 
+  color: #000; 
 }
 
 .arrow2 {
@@ -52,21 +131,16 @@ h1
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 3rem; /* Tamanho da seta */
-  color: #000; /* Cor da seta */
+  font-size: 3rem; 
+  color: #000; 
 }
-/* Animação de subir e descer */
+
 .bounce {
   animation: bounce 2s infinite;
 }
 
-@keyframes bounce {
-  0%, 100% {
-      transform: translateX(-50%) translateY(0);
-  }
-  50% {
-      transform: translateX(-50%) translateY(20px);
-  }
+.fade-in-text {
+  animation: fallFadeIn 1s ease-out;
 }
 
 
@@ -83,7 +157,19 @@ h1
       }
     }
 
-  
-  .fade-in-text {
-    animation: fallFadeIn 1s ease-out;
+
+
+  @keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(20px);
+    }
   }
+  
+  @keyframes blink {
+    0%, 20%, 100% { opacity: 0; }
+    10% { opacity: 1; } 
+  }
+  
