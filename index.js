@@ -1,3 +1,4 @@
+// Efeito na foto Floating:
 gsap.to('.floating-circle', {
     y: -10, 
     repeat: -1, 
@@ -6,6 +7,7 @@ gsap.to('.floating-circle', {
     ease: 'sine.inOut' 
 });
 
+// Efeito de imersão h2:
 const titulo = document.getElementById("titulo");
 
 titulo.addEventListener("mouseenter", () => {
@@ -26,11 +28,11 @@ titulo.addEventListener("mouseleave", () => {
     });
 });
 
-setTimeout(() => {
-    document.getElementById('loader').style.display = 'none'; 
-    document.getElementById('content').style.display = 'block'; 
-    document.body.style.overflow = 'auto'; 
-}, 5000);
+// Efeito Loading:
+
+
+
+// SmoothScroll Efeito:
 
 function smoothScroll(target) {
     const targetElement = document.querySelector(target);
@@ -43,10 +45,90 @@ function smoothScroll(target) {
     });
 }
  
+// Efeito de digitação:
+const titles = ["Diego Miura Fogacio", "Full Stack Developer"];
+let index = 0;
+let charIndex = 0;
+const typingSpeed = 100; 
+const deletingSpeed = 50; 
+const pauseDuration = 1000; 
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        smoothScroll(this.getAttribute('href'));
+function type() {
+    const currentTitle = titles[index];
+    document.getElementById("titulo").textContent = currentTitle.slice(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === currentTitle.length) {
+        setTimeout(() => {
+            deleteTitle();
+        }, pauseDuration);
+    } else {
+        setTimeout(type, typingSpeed);
+    }
+}
+
+function deleteTitle() {
+    const currentTitle = titles[index];
+    document.getElementById("titulo").textContent = currentTitle.slice(0, charIndex);
+    charIndex--;
+
+    if (charIndex < 0) {
+        index = (index + 1) % titles.length;
+        charIndex = 0;
+        setTimeout(type, pauseDuration);
+    } else {
+        setTimeout(deleteTitle, deletingSpeed);
+    }
+}
+
+
+type();
+
+
+// Underline NAV:
+function updateActiveLink() {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionHeight = section.offsetHeight;
+
+        if (sectionTop <= window.innerHeight / 2 && sectionTop + sectionHeight > window.innerHeight / 2) {
+            navLinks.forEach(link => {
+                link.classList.remove('active'); 
+            });
+
+            const activeLink = document.querySelector(`a[href="#${section.id}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active'); 
+            }
+        }
     });
-});
+}
+
+
+document.addEventListener("scroll", updateActiveLink);
+
+
+document.addEventListener("DOMContentLoaded", updateActiveLink);
+
+
+// Cards Experience:
+
+
+
+    const cards = document.querySelectorAll('.experience-card');
+
+    gsap.from(cards, {
+        duration: 0.5,
+        opacity: 0,
+        y: 50,
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: '#experience',
+            start: 'top 80%', 
+            toggleActions: 'play none none reverse'
+        }
+    });
+

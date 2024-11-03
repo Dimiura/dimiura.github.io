@@ -22,20 +22,18 @@ h1
 }
 
 body {
-  margin: 0;
+
   height: 100vh;
-  overflow: hidden; 
   background-size: cover;
 }
 
-.loader-container {
-  position: fixed; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  text-align: center;
-  z-index: 1000; 
+section {
+  min-height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
+
 
 .fa-spinner {
   font-size: 100px; 
@@ -71,9 +69,7 @@ p {
   margin-top: 20px;
 }
 
-#content {
-  display: none; 
-}
+
 
 
 .floating-circle {
@@ -95,26 +91,27 @@ p {
 }
 
 
+
 .hover-underline {
-    position: relative; 
-    display: inline-block; 
-  }
+  position: relative; 
+  display: inline-block; 
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; 
+  background-color: #fff; 
+  bottom: -5px; 
+  left: 0;
+  transition: width 0.4s ease-out;
+}
 
 
-  .hover-underline::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px; 
-    background-color: #fff; 
-    bottom: -5px; 
-    left: 0;
-    transition: width 0.4s ease-out;
-  }
-
-  .hover-underline:hover::after {
-    width: 100%; 
-  }
+.hover-underline.active::after {
+  width: 100%; 
+}
 
 
 .arrow {
@@ -168,8 +165,13 @@ p {
     }
   }
   
-  @keyframes blink {
-    0%, 20%, 100% { opacity: 0; }
-    10% { opacity: 1; } 
-  }
-  
+  .typing-text {
+    display: inline-block;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.7s step-end infinite;
+}
+@keyframes blink {
+    50% { border-color: transparent; }
+}

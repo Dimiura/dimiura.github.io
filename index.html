@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Portfolio - Home </title>
+        <title> Diego Miura Fogacio </title>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -12,106 +12,141 @@
     </head>
 
     <body class="background">
-        <div class="loader-container" id="loader">
-            <i class="fas fa-spinner"></i>
-            <div class="dots">
-                <span class="dot">.</span>
-                <span class="dot">.</span>
-                <span class="dot">.</span>
-            </div>
-        </div>
+
+
+
+
         <div id="content">
-            <!-- Navbar do Portfólio -->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #101011">
                 <div class="container">
-                    <a class="navbar-brand hover-underline" href="https://www.linkedin.com/in/diego-miura-512759211/">Diego Miura Fogacio</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active hover-underline" aria-current="page" href="#">Home</a>
+                                <a id="about-link" class="nav-link hover-underline" href="#about">About</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link hover-underline" href="#about">Sobre   </a>
+                            <li class="nav-item"  >
+                                <a id="about-link" class="nav-link hover-underline" href="#experience">Experience</a>
                             </li>
-                           
+                            <li class="nav-item " disabled >
+                                <a id="about-link" class="nav-link hover-underline" disabled href="#Projects">Projects</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
 
 
-     
 
 
-        <!-- Apresentação  -->
-        <header class="text-dark background d-flex align-items-center w-100 vh-100">
-            <div class="container text-center fade-in-text">
-                <h1 >Bem-vindo a  minha página de apresentação</h1>
-                <p class="fs-1">Aqui você poderá saber mais sobre mim e sobre meus conhecimentos em front-end, além de contar um pouco do meu trajeto em back-end</p>
-               
-                
-            </div>
-            <div class="arrow bounce">
-                <i class="bi bi-chevron-down text-light"></i> 
-            </div>
-            <div class="arrow2 bounce">
-                <i class="bi bi-chevron-down text-light"></i> 
-            </div>
-        </header>
 
-        <section id="about" class="p-5">
-            <div class="container">
-                <div class="container-fluid">   
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h2 class="text-center mb-5" id="titulo"> Sobre mim </h2>
+
+            
+            <section id="about" class="p-5">
+                <div class="container">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h2 class="text-center mb-5 typing-text" id="titulo"> Diego Miura Fogacio </h2>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row"> 
-                        <div class="col-sm-8"> 
-                            <p > Primeiramente, meu nome é Diego Miura, eu tenho 21 anos e comecei a minha carreira no mundo dev em 2022. </p>
-                            <p> Um ponto importante sobre mim, é que eu levo uma vida tranquilamente saudável e sou um grande fã de esportes, principalmente o surf </p>
-                            <p> Eu utilizo computadores desde que tenho 4 anos de idade, eu comecei jogando um jogo de RPG nomeado "God's War" e não, eu não confundi com God of war, era "God's War" mesmo</p>
-                            <p> Desde então, computadores e tecnologia se tornaram algo muito presente em toda minha vida.</p>
-                            <p> Em algum momento, desejo participar ou fundar uma associação de projetos voltados pra segurança, saúde dos oceanos e da vida marinha, parecido com o que o <a href="https://www.tamar.org.br/" class="hover-underline" style="text-decoration:none;color:#fff" >Projeto Tamar</a> faz hoje.</p>
-                        </div>
-                        <div class="col-sm-4 d-flex justify-content-end align-items-center"> 
-                            <div class="floating-circle">
-                                <img class="img-fluid" src="https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/441490204_541830904969399_7914376979446205591_n.jpg?ccb=11-4&oh=01_Q5AaIJQZoOG5e8ar3dUvMUNGtr0OU5mY2-9YkjYCDjVMWNmM&oe=672962F9&_nc_sid=5e03e0&_nc_cat=103">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <p>
+                                    Olá, meu nome é Diego Miura Fogacio, tenho 21 anos e sou um profissional apaixonado
+                                    por tecnologia e desenvolvimento de software. Resido no Brasil e possuo uma sólida
+                                    experiência em desenvolvimento web, atuando tanto na parte Front-End quanto na parte
+                                    Back-End.
+                                </p>
+                                <p>
+                                    Nos últimos anos, tive a oportunidade de trabalhar em diversos projetos, onde
+                                    desenvolvi habilidades em linguagens como HTML, CSS, JavaScript e alguns frameworks
+                                    para o FrontEnd, além de trabalhar com tecnologias íncriveis no BackEnd, incluindo
+                                    Python, Django e banco de dados SQL. Essa combinação me permite criar soluções
+                                    completas e eficientes, desde a interface do usuário até a lógica do servidor.
+                                </p>
+                                <p>
+                                    Estou sempre em busca de aprimoramento profissional e atualizado com as tendências
+                                    do setor, com o objetivo de entregar soluções inovadoras que atendam às necessidades
+                                    dos clientes e proporcionem uma experiência de usuário excepcional.
+                                </p>
+
+                                <p>
+                                    Agradeço a visita ao meu portfólio e fico à disposição para discutir possíveis
+                                    colaborações e projetos.
+                                </p>
+
+
+                            </div>
+                            <div class="col-sm-4 d-flex justify-content-end align-items-center">
+                                <div class="floating-circle">
+                                    <img class="img-fluid"
+                                        src="https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/441490204_541830904969399_7914376979446205591_n.jpg?ccb=11-4&oh=01_Q5AaIJQZoOG5e8ar3dUvMUNGtr0OU5mY2-9YkjYCDjVMWNmM&oe=672962F9&_nc_sid=5e03e0&_nc_cat=103">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>  
-            </div>
-        </section>
+                </div>
+            </section>
+            <section id="experience" class="p-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">Experiências</h2>
+                    <div class="row">
+                        <div class="col-md-12 mb-4">
+                            <div class="card shadow bg-light experience-card" style="opacity:0.1">
+                              
+                                <div class="card-body">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <div class="card shadow bg-light experience-card" style="opacity:0.1">
+                              
+                                <div class="card-body">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <div class="card shadow bg-light experience-card" style="opacity:0.1">
+                              
+                                <div class="card-body">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
-     
-
-
-
-
-        <header class="text-dark background d-flex align-items-center w-100 vh-100">
-            <div class="container text-center fade-in-text">
-                <h1 >Restante da página em construção...</h1>
-            </div>
-        </header>
 
 
 
 
 
-       
-    
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-        <script src="index.js"></script>
+            <header class="text-dark background d-flex align-items-center w-100 vh-100">
+                <div class="container text-center fade-in-text">
+                    <h1>Restante da página em construção...</h1>
+                </div>
+            </header>
+
+
+
+
+
+
+
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+            <script src="index.js"></script>
     </body>
 
     </html>
