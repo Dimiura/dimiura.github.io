@@ -153,7 +153,7 @@ section {
     white-space: nowrap;
     overflow: hidden;
     animation: blink 0.7s step-end infinite;
-    min-height:50px;
+    min-height:37px;
 }
 @keyframes blink {
     50% { border-color: transparent; }
