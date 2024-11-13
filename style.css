@@ -51,11 +51,11 @@ body {
   height: 100vh;
   background-size: cover;
   padding: 0;
-    background-color: #000; 
-    margin: 0;
-    overflow: hidden;
-    color: #00ff00;
-    font-family: monospace; 
+  background-color: #000; 
+  margin: 0;
+  overflow: hidden;
+  color: #00ff00;
+  font-family: monospace; 
     
   
 }
@@ -68,33 +68,9 @@ section {
 }
 
 
-
-
-
-
-
 .nav-item .nav-link 
 {
-  color:#00ff00!important;
-}
-
-
-.floating-circle {
-  width: 250px; 
-  height: 250px;
-  border-radius: 50%; 
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-align: center;
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
-}
-
-.floating-circle img {
-  width: 100%; 
-  height: auto;
+  color:rgb(0, 255, 0)!important;
 }
 
 
@@ -175,13 +151,39 @@ section {
   .typing-text {
     display: inline-block;
     border-right: 2px solid;
-    white-space: nowrap;
+    white-space: wrap;
     overflow: hidden;
     animation: blink 0.7s step-end infinite;
     min-height:37px;
 }
 @keyframes blink {
     50% { border-color: transparent; }
+}
+
+@keyframes dotAnimation {
+  0% {
+      top: 0;
+      left: 0;
+  }
+  25% {
+      top: 0;
+      left: 100%;
+      transform: translateX(-100%);
+  }
+  50% {
+      top: 100%;
+      left: 100%;
+      transform: translate(-100%, -100%);
+  }
+  75% {
+      top: 100%;
+      left: 0;
+      transform: translateY(-100%);
+  }
+  100% {
+      top: 0;
+      left: 0;
+  }
 }
 
 
@@ -195,13 +197,67 @@ section {
   background-color: #101011; 
 }
 
+.experience-card {
+  position: relative;
+  background-color: #101011;
+  border-radius: 10px;
+  padding: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; 
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+  transition: transform 1s ease;
+  transform: translateX(-100%);
+}
+
+.experience-card:hover::before {
+  transform: translateX(100%); /* Movimenta a sombra para a direita */
+}
+
 @media (max-width:768px)
 {
   
-#particles-js {
-display:none;
+  body
+  {
+    overflow: auto;
+  }
+
+  nav .navbar-toggler
+  {
+    display:none;
+  }
+
+  .typing-text {
+    display: inline-block;
+    border-right: 2px solid;
+    white-space: wrap;
+    overflow: hidden;
+    animation: blink 0.7s step-end infinite;
+    min-height:80px;
 }
-}
+
+
+
+  #particles-js {
+  display:none;
+  }
+  }
+
+
 
 
 /*  Social media  */
