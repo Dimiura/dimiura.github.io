@@ -299,3 +299,102 @@ section {
 .social-icon:hover .fa-whatsapp {
   color: #25d366; 
 }
+
+
+/* Skills Section */
+
+.skill-box {
+  text-align: center;
+  opacity: 0; /* Inicialmente invisível */
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+.skill-item {
+  padding: 20px;
+  position: relative;
+  background-color: #101011;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-icon {
+  font-size: 50px;
+  color: #00ff00;
+  transition: transform 0.3s ease;
+}
+
+.skill-box:hover .skill-item {
+  transform: translateY(-15px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 255, 0, 0.3);
+}
+
+h3 {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+#floating-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+/* Contact CSS */
+
+
+#contato .form-control {
+  color: #00ff00; 
+}
+
+
+#contato .form-control:focus {
+  color: #00ff00; 
+  border-color: #00ff00;
+}
+
+
+#contato textarea.form-control {
+  color: #0ff003; 
+}
+
+#contato input
+{
+  background-color:#101011;
+  border:1px solid #00ff00;
+  border-radius:15px;
+}
+
+#contato textarea
+{
+  background-color:#101011;
+  border:1px solid #00ff00;
+  border-radius:15px;
+}
+
+#contato .form-label {
+  font-weight: bold;
+  color: #0ff005;
+}
+
+#contato .form-control {
+  border-radius: 8px;
+  padding: 15px;
+}
+
+#contato .btn-primary {
+  background-color: transparent;
+  border-color: #0ff005;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+

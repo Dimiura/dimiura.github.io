@@ -10,7 +10,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
 
     <body class="background">
@@ -33,10 +33,19 @@
                                 <a id="about-link" class="nav-link hover-underline" disabled
                                     href="#projects">Projects</a>
                             </li>
+                            <li class="nav-item ">
+                                <a id="about-link" class="nav-link hover-underline" 
+                                    href="#skills">Skills</a>
+                            </li>
+                            <!-- <li class="nav-item ">
+                                <a id="about-link" class="nav-link hover-underline" 
+                                    href="#contato">Contact</a>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
             </nav>
+
             <section id="about" class="p-5">
                 <div class="container">
                     <div class="container-fluid">
@@ -83,9 +92,6 @@
                                         class="social-icon">
                                         <i class="fab fa-linkedin"></i>
                                     </a>
-                                    <a href="https://w.app/4efxbP" target="_blank" class="social-icon">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
                                     <a href="https://github.com/Dimiura" target="_blank" class="social-icon">
                                         <i class="fab fa-github"></i>
                                     </a>
@@ -102,6 +108,7 @@
                     </div>
                 </div>
             </section>
+
             <section id="experience" class="p-5">
                 <div class="container">
                     <h2 class="text-center mb-5">Experiências</h2>
@@ -130,21 +137,129 @@
                 </div>
             </section>
             <section id="projects" class="p-5">
-
                 <div class="container">
                     <h2 class="text-center mb-5">Projetos</h2>
                     <div class="row">
                         <div class="col-md-12 mb-4">
-                            <div class="card shadow-lg bg-transparent experience-card mt-5">
+                            <div class="card shadow-lg experience-card mt-5" style="position: relative;">
                                 <div class="card-body justify-content-center">
-                                    <h2 class="text-center" style="opacity:1;color:#00ff00"> Construction in
-                                        progress... </h2>
+                                    <h2 class="text-center" style="opacity:1;color:#00ff00"> Construction in progress... </h2>
+                                    <!-- Pip-Boy ao lado do texto -->
+                                    <img src="pipboy.png" alt="Pip-Boy" class="pipboy" style="position: absolute; bottom: -40px; right: 0; max-width: 150px;">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            
+            <section id="skills" class="p-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 skill-box">
+                            <div class="skill-item">
+                                <i class="fab fa-html5 skill-icon"></i>
+                                <h3>HTML</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4 skill-box">
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt skill-icon"></i>
+                                <h3>CSS</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4 skill-box">
+                            <div class="skill-item">
+                                <i class="fab fa-js-square skill-icon"></i>
+                                <h3>JavaScript</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-4 skill-box">
+                            <div class="skill-item">
+                                <i class="fab fa-python skill-icon"></i>
+                                <h3>Python</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4 skill-box">
+                            <div class="skill-item">
+                                <i class="fas fa-database skill-icon"></i>
+                                <h3>SQL</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4 skill-box">
+                            <div class="skill-item">
+                                <i class="fas fa-server skill-icon"></i>
+                                <h3>Django</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-4 skill-box">
+                            <div class="skill-item">
+                                <i class="fab fa-hubspot skill-icon"></i>
+                                <h3>HubSpot</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4 skill-box">
+                            <div class="skill-item">
+                                <i class="fab fa-php skill-icon"></i>
+                                <h3>PHP</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4 skill-box">
+                            <div class="skill-item">
+                                <i class="fab fa-wordpress skill-icon"></i>
+                                <h3>WordPress</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-4 skill-box">
+                            <div class="skill-item">
+                                <i class="fas fa-bolt skill-icon"></i> 
+                                <h3>Postman</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4 skill-box">
+                            <div class="skill-item">
+                                <i class="fas fa-plug skill-icon"></i> 
+                                <h3>API's</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>         
+            
+            <!-- <section id="contato" class="p-5 ">
+                <div class="container">
+                    <h2 class="text-center mb-5">Contact</h2>
+                    <div class="row">
+                        <div class="col-md-6 mx-auto">
+                            <form id="contact-form" action="#" method="POST">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                               
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            
         </div>
         <div id="particles-js"></div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

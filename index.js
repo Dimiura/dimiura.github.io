@@ -211,3 +211,24 @@ particlesJS('particles-js', {
   },
   "retina_detect": true
 });
+
+
+// Skills Section
+
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.fromTo(
+      ".skill-box",
+      { opacity: 0, y: 50 },
+      {
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+              trigger: "#skills",
+              start: "top 80%",
+          },
+      }
+  );
+});
