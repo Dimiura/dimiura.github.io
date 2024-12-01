@@ -10,6 +10,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
 
@@ -37,6 +38,10 @@
                                 <a id="about-link" class="nav-link hover-underline" 
                                     href="#skills">Skills</a>
                             </li>
+                            <!-- <li class="nav-item ">
+                                <a id="about-link" class="nav-link hover-underline" 
+                                    href="#globo">Globo</a>
+                            </li> -->
                             <!-- <li class="nav-item ">
                                 <a id="about-link" class="nav-link hover-underline" 
                                     href="#contato">Contact</a>
@@ -116,20 +121,20 @@
                         <div class="col-md-12 mb-4">
                             <div class=" card experience-card mt-5" style="background-color: #101011;">
                                 <div class="card-body">
-                                    <p class="card-content cargo"> Estagiário de Desenvolvimento FrontEnd </p>
-                                    <p class="card-content empresa"> Agência Inbound  </p>
-                                    <p class="card-content data"> Fev 2023 - Ago 2024</p>
-                                    <p class="card-content data"> Habilidades Desenvolvidas:</p>
-                                    <p class="card-content habilidades" > HTML5, CSS, SASS, JS, HUBL, PHP, WORDPRESS, ELEMENTOR, COMUNICAÇÃO E COMPONENTES</p>
-                                </div>
-                            </div>
-                            <div class=" card experience-card mt-5" style="background-color: #101011;">
-                                <div class="card-body">
                                     <p class="card-content cargo"> Desenvolvedor Full Stack </p>
                                     <p class="card-content empresa"> Epigene DNA Experts </p>
                                     <p class="card-content data">Ago 2024 -  Atualmente </p>
                                     <p class="card-content data"> Habilidades Desenvolvidas:</p>
                                     <p class="card-content habilidades" > Python, Django, Criação de API's, Postman, Imsonia e SQLite</p>
+                                </div>
+                            </div>
+                            <div class=" card experience-card mt-5" style="background-color: #101011;">
+                                <div class="card-body">
+                                    <p class="card-content cargo"> Estagiário de Desenvolvimento FrontEnd </p>
+                                    <p class="card-content empresa"> Agência Inbound  </p>
+                                    <p class="card-content data"> Fev 2023 - Ago 2024</p>
+                                    <p class="card-content data"> Habilidades Desenvolvidas:</p>
+                                    <p class="card-content habilidades" > HTML5, CSS, SASS, JS, HUBL, PHP, WORDPRESS, ELEMENTOR, COMUNICAÇÃO E COMPONENTES</p>
                                 </div>
                             </div>
                         </div>
@@ -155,80 +160,82 @@
             
             <section id="skills" class="p-5">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 skill-box">
-                            <div class="skill-item">
-                                <i class="fab fa-html5 skill-icon"></i>
-                                <h3>HTML</h3>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4 skill-box">
+                                <div class="skill-item">
+                                    <i class="fab fa-html5 skill-icon"></i>
+                                    <h3>HTML</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 skill-box">
+                                <div class="skill-item">
+                                    <i class="fab fa-css3-alt skill-icon"></i>
+                                    <h3>CSS</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 skill-box">
+                                <div class="skill-item">
+                                    <i class="fab fa-js-square skill-icon"></i>
+                                    <h3>JavaScript</h3>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-4 skill-box">
-                            <div class="skill-item">
-                                <i class="fab fa-css3-alt skill-icon"></i>
-                                <h3>CSS</h3>
+                        <div class="row mt-4">
+                            <div class="col-md-4 skill-box">
+                                <div class="skill-item">
+                                    <i class="fab fa-python skill-icon"></i>
+                                    <h3>Python</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 skill-box">
+                                <div class="skill-item">
+                                    <i class="fas fa-database skill-icon"></i>
+                                    <h3>SQL</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 skill-box">
+                                <div class="skill-item">
+                                    <i class="fas fa-server skill-icon"></i>
+                                    <h3>Django</h3>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-4 skill-box">
-                            <div class="skill-item">
-                                <i class="fab fa-js-square skill-icon"></i>
-                                <h3>JavaScript</h3>
+                        <div class="row mt-4">
+                            <div class="col-md-4 skill-box">
+                                <div class="skill-item">
+                                    <i class="fab fa-hubspot skill-icon"></i>
+                                    <h3>HubSpot</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 skill-box">
+                                <div class="skill-item">
+                                    <i class="fab fa-php skill-icon"></i>
+                                    <h3>PHP</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 skill-box">
+                                <div class="skill-item">
+                                    <i class="fab fa-wordpress skill-icon"></i>
+                                    <h3>WordPress</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-md-4 skill-box">
-                            <div class="skill-item">
-                                <i class="fab fa-python skill-icon"></i>
-                                <h3>Python</h3>
+                        <div class="row mt-4">
+                            <div class="col-md-4 skill-box">
+                                <div class="skill-item">
+                                    <i class="fas fa-bolt skill-icon"></i> 
+                                    <h3>Postman</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 skill-box">
+                                <div class="skill-item">
+                                    <i class="fas fa-plug skill-icon"></i> 
+                                    <h3>API's</h3>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-4 skill-box">
-                            <div class="skill-item">
-                                <i class="fas fa-database skill-icon"></i>
-                                <h3>SQL</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-4 skill-box">
-                            <div class="skill-item">
-                                <i class="fas fa-server skill-icon"></i>
-                                <h3>Django</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-md-4 skill-box">
-                            <div class="skill-item">
-                                <i class="fab fa-hubspot skill-icon"></i>
-                                <h3>HubSpot</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-4 skill-box">
-                            <div class="skill-item">
-                                <i class="fab fa-php skill-icon"></i>
-                                <h3>PHP</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-4 skill-box">
-                            <div class="skill-item">
-                                <i class="fab fa-wordpress skill-icon"></i>
-                                <h3>WordPress</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-md-4 skill-box">
-                            <div class="skill-item">
-                                <i class="fas fa-bolt skill-icon"></i> 
-                                <h3>Postman</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-4 skill-box">
-                            <div class="skill-item">
-                                <i class="fas fa-plug skill-icon"></i> 
-                                <h3>API's</h3>
-                            </div>
-                        </div>
-                    </div>
+                    </div>    
                 </div>
             </section>         
             
@@ -259,6 +266,10 @@
                     </div>
                 </div>
             </section> -->
+
+            <!-- <section id="globo" class="p-5">
+                <div id="globe-container">teste</div>
+            </section> -->
             
         </div>
         <div id="particles-js"></div>
@@ -269,6 +280,6 @@
         <script src="index.js"></script>
 
 
+        
     </body>
-
-    </html>
+</html>

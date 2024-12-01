@@ -232,3 +232,97 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   );
 });
+
+
+
+// const container = document.getElementById('globe-container');
+// const scene = new THREE.Scene();
+// const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+
+// const renderer = new THREE.WebGLRenderer({ alpha: true });
+// renderer.setSize(container.clientWidth, container.clientHeight);
+// container.appendChild(renderer.domElement);
+
+
+// const globeGeometry = new THREE.SphereGeometry(1, 32, 32);
+// const globeMaterial = new THREE.MeshBasicMaterial({
+//     color: 0x000000, 
+//     wireframe: true,
+//     opacity: 0.5,
+//     transparent: true
+// });
+// const globe = new THREE.Mesh(globeGeometry, globeMaterial);
+// scene.add(globe);
+
+
+// const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+// scene.add(ambientLight);
+
+
+// camera.position.z = 3;
+
+
+// function addSkillIcon(iconClass, latitude, longitude) {
+//     const spriteMaterial = new THREE.SpriteMaterial({
+//         map: createIconTexture(iconClass), 
+//         transparent: true,
+//     });
+
+//     const sprite = new THREE.Sprite(spriteMaterial);
+//     sprite.scale.set(0.15, 0.15, 1);  
+
+//     const sphericalCoords = new THREE.Spherical(1.5, latitude, longitude); 
+//     const iconPosition = new THREE.Vector3().setFromSpherical(sphericalCoords);
+//     sprite.position.set(iconPosition.x, iconPosition.y, iconPosition.z);
+
+
+//     scene.add(sprite);
+
+
+//     sprite.on('mouseover', function () {
+//         gsap.to(sprite.position, { z: 2, duration: 0.5 }); 
+//     });
+
+//     sprite.on('mouseout', function () {
+//         gsap.to(sprite.position, { z: 1.5, duration: 0.5 }); 
+//     });
+// }
+
+
+// function createIconTexture(iconClass) {
+//     const canvas = document.createElement('canvas');
+//     const context = canvas.getContext('2d');
+//     context.font = '50px FontAwesome';
+//     context.fillStyle = '#ffffff';
+//     context.fillText(iconClass, 0, 50);
+
+//     const texture = new THREE.CanvasTexture(canvas);
+//     return texture;
+// }
+
+
+// addSkillIcon('fa-html5', Math.PI / 4, Math.PI / 4);  
+// addSkillIcon('fa-css3-alt', Math.PI / 4, -Math.PI / 4); 
+// addSkillIcon('fa-js-square', -Math.PI / 4, Math.PI / 4); 
+// addSkillIcon('fa-python', -Math.PI / 4, -Math.PI / 4);  
+// addSkillIcon('fa-database', Math.PI / 6, Math.PI / 2); 
+// addSkillIcon('fa-server', Math.PI / 3, -Math.PI / 3);
+// addSkillIcon('fa-hubspot', Math.PI / 3, Math.PI / 3); 
+// addSkillIcon('fa-php', -Math.PI / 6, -Math.PI / 3);    
+// addSkillIcon('fa-wordpress', -Math.PI / 6, Math.PI / 3);  
+// addSkillIcon('fa-bolt', Math.PI / 3, Math.PI / 2);   
+// addSkillIcon('fa-plug', -Math.PI / 3, -Math.PI / 2);   
+
+
+// function animate() {
+//     requestAnimationFrame(animate);
+//     globe.rotation.y += 0.01; 
+//     renderer.render(scene, camera);
+// }
+// animate();
+
+// window.addEventListener('resize', () => {
+//     camera.aspect = container.clientWidth / container.clientHeight;
+//     camera.updateProjectionMatrix();
+//     renderer.setSize(container.clientWidth, container.clientHeight);
+// });
