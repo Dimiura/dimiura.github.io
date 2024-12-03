@@ -38,7 +38,7 @@ function smoothScroll(target) {
 }
  
 // Efeito de digitação:
-const titles = ["Diego Miura Fogacio", "Full Stack Developer"];
+const titles = ["Diego Miura Fogacio", "Front-End Developer"];
 let index = 0;
 let charIndex = 0;
 const typingSpeed = 100; 
