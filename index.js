@@ -342,5 +342,5 @@ hoverButton.addEventListener('mouseenter', () => {
 // curriculo pdf
 
 function openPDF() {
-  window.open('src/archives/pdf/Curriculo_Diego_Miura.pdf', '_blank');
+  window.open('assets/Curriculo_Diego_Miura.pdf', '_blank');
 }
