@@ -409,3 +409,31 @@ h3 {
   color: #ffffff;
   pointer-events: none;
 } */
+
+
+/* Botão no estilo Fallout da home. */
+
+.fallout-button {
+  background: linear-gradient(145deg, #41a849, #2e8040); 
+  border: 3px solid #fffbce; 
+  color: #fffbce; 
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 8px;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 0 4px #254729, 0 0 8px #2aff84;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.fallout-button:hover {
+  background: linear-gradient(145deg, #2e8040, #41a849);
+  box-shadow: 0 6px #254729, 0 0 12px #2aff84;
+  transform: translateY(-3px);
+}
+
+.fallout-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px #254729, 0 0 6px #2aff84;
+}

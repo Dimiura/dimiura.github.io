@@ -1,11 +1,3 @@
-// Efeito na foto Floating:
-gsap.to('.floating-circle', {
-    y: -10, 
-    repeat: -1, 
-    yoyo: true, 
-    duration: 1.5, 
-    ease: 'sine.inOut' 
-});
 
 // Efeito de imersão h2:
 const titulo = document.getElementById("titulo");
@@ -326,3 +318,29 @@ document.addEventListener("DOMContentLoaded", function () {
 //     camera.updateProjectionMatrix();
 //     renderer.setSize(container.clientWidth, container.clientHeight);
 // });
+
+// Button Sound do Portfólio:
+
+
+document.addEventListener('click', () => {
+  const hoverSound = document.getElementById('hoverSound');
+  hoverSound.play().catch(() => {
+    console.log('Áudio habilitado após a interação do usuário.');
+  });
+}, { once: true }); 
+
+const hoverButton = document.getElementById('hoverButton');
+const hoverSound = document.getElementById('hoverSound');
+
+hoverButton.addEventListener('mouseenter', () => {
+  hoverSound.currentTime = 0; 
+  hoverSound.play().catch(error => {
+    console.error('Erro ao reproduzir o som:', error);
+  });
+});
+
+// curriculo pdf
+
+function openPDF() {
+  window.open('src/archives/pdf/Curriculo_Diego_Miura.pdf', '_blank');
+}
