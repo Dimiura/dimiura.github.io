@@ -197,7 +197,7 @@ section {
   background-color: #101011; 
 }
 
-.experience-card {
+.card {
   position: relative;
   background-color: #101011;
   border-radius: 10px;
@@ -207,12 +207,12 @@ section {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.experience-card:hover {
+.card:hover {
   transform: translateY(-10px); 
   box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
 }
 
-.experience-card::before {
+.card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -224,12 +224,14 @@ section {
   transform: translateX(-100%);
 }
 
-.experience-card:hover::before {
+.card:hover::before {
   transform: translateX(100%); /* Movimenta a sombra para a direita */
 }
 
 @media (max-width:768px)
 {
+
+  
   
   body
   {
@@ -247,9 +249,15 @@ section {
     white-space: wrap;
     overflow: hidden;
     animation: blink 0.7s step-end infinite;
-    min-height:80px;
+    min-height:0px;
+    margin-top:20px;
 }
 
+.typing-text-container
+{
+  min-height:105px;
+  text-align:center;
+}
 
 
   #particles-js {
@@ -303,21 +311,7 @@ section {
 
 /* Skills Section */
 
-.skill-box {
-  text-align: center;
-  opacity: 0; 
-  transform: scale(1);
-  transition: all 0.3s ease;
-}
 
-.skill-item {
-  padding: 20px;
-  position: relative;
-  background-color: #101011;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .skill-icon {
   font-size: 50px;
@@ -448,39 +442,6 @@ h3 {
   height:20px;
   width: 20px;
   margin-left:5px;
-}
-
-.project-card {
-  position: relative;
-  background-color: #101011;
-  border-radius: 10px;
-  padding: 1rem;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  cursor:pointer;
-  min-height:380px;
-}
-
-.project-card:hover {
-  transform: translateY(-10px); 
-  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
-}
-
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%; 
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(0, 255, 0, 0.1), transparent);
-  transition: transform 1s ease;
-  transform: translateX(-100%);
-}
-
-.project-card:hover::before {
-  transform: translateX(100%); /* Movimenta a sombra para a direita */
 }
 
 .project-card .footer 
