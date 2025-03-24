@@ -12,11 +12,11 @@
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="https://cdn.jsdelivr.net/npm/simple-icons@latest/simple-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     </head>
 
     <body class="background">
-        <audio id="hoverSound" src="src\audio\button_sound.wav"></audio>
         <div id="content">
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #101011">
                 <div class="container">
@@ -92,13 +92,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12 text-center mt-2">
-                                <a class="fallout-button" id="hoverButton" target="_blank" rel="noopener"
-                                    href="https://drive.google.com/file/d/1PYHb1Y0eLhQxFXYEriDtVCsBHI0Ms9qr/view?usp=sharing">Checar
-                                    currículo > </a>
-                            </div>
-                        </div>
+                      
                         <div class="row mt-2">
                             <div class="col-sm-12 text-center">
                                 <div class="social-icons">
@@ -128,30 +122,49 @@
                     <h2 class="text-center mb-5">Experiências</h2>
                     <div class="row">
                         <div class="col-md-12 mb-4">
-                            <div class=" card mt-5" style="background-color: #101011;">
-                                <div class="card-body">
-                                    <p class="card-content cargo"> Desenvolvedor Full Stack (DJANGO) </p>
-                                    <p class="card-content empresa"> Epigene DNA Experts </p>
-                                    <p class="card-content data">Ago 2024 - Atualmente </p>
-                                    <p class="card-content data"> Habilidades Desenvolvidas:</p>
-                                    <p class="card-content habilidades"> Python, Django, Criação de API's, Postman,
-                                        SQLite, HTML, CSS e JavaScript </p>
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <p class="card-content cargo">Desenvolvedor Full Stack (DJANGO)</p>
+                                            <p class="card-content empresa">Epigene DNA Experts</p>
+                                            <p class="card-content data">Ago 2024 - Jan 2025</p>
+                                            <p class="card-content data">Habilidades Desenvolvidas:</p>
+                                            <p class="card-content habilidades">Python, Django, Criação de API's, Postman, SQLite, HTML, CSS e JavaScript</p>
+                                        </div>
+                                    </div>
+            
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <p class="card-content cargo">Desenvolvedor Front-End</p>
+                                            <p class="card-content empresa">Freelance</p>
+                                            <p class="card-content data">Mar 2025 - Atualmente</p>
+                                            <p class="card-content data">Habilidades Desenvolvidas:</p>
+                                            <p class="card-content habilidades">Python, Django, HTML, CSS e JS - Criação de estrutura Kanban</p>
+                                        </div>
+                                    </div>
+            
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <p class="card-content cargo">Estagiário de Desenvolvimento Front-End</p>
+                                            <p class="card-content empresa">Agência Inbound</p>
+                                            <p class="card-content data">Fev 2023 - Ago 2024</p>
+                                            <p class="card-content data">Habilidades Desenvolvidas:</p>
+                                            <p class="card-content habilidades">HTML5, CSS, SASS, JavaScript, HubL, PhP, Wordpress, Elementor e Componentes.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class=" card mt-5" style="background-color: #101011;">
-                                <div class="card-body">
-                                    <p class="card-content cargo"> Estagiário de Desenvolvimento Front-End </p>
-                                    <p class="card-content empresa"> Agência Inbound </p>
-                                    <p class="card-content data"> Fev 2023 - Ago 2024</p>
-                                    <p class="card-content data"> Habilidades Desenvolvidas:</p>
-                                    <p class="card-content habilidades"> HTML5, CSS, SASS, JavaScript, HubL, PhP,
-                                        Wordpress, Elementor e Componentes.</p>
-                                </div>
-                            </div>
+            
+                                <!-- Botões de navegação -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                
+                            </div> <!-- Fechamento correto do Swiper -->
                         </div>
                     </div>
                 </div>
             </section>
+            
             <section id="projects" class="p-2">
                 <div class="container">
                     <h2 class="text-center mb-5">Projetos</h2>
@@ -613,6 +626,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="index.js"></script>
 
 
