@@ -54,9 +54,7 @@ body {
   background-color: #000; 
   margin: 0;
   overflow: hidden;
-  color: #00ff00;
   font-family: monospace; 
-    
   
 }
 
@@ -122,6 +120,33 @@ section {
 .fade-in-text {
   animation: fallFadeIn 1s ease-out;
 }
+
+.carousel-inner {
+      padding: 1rem 0;
+  }
+  
+  .card-projects {
+      transition: transform 0.3s ease;
+      margin: 0 10px;
+  }
+  
+  .card-projects:hover {
+      transform: translateY(-5px);
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+      width: 5%;
+      border-radius: 5px;
+      position:absolute;
+  }
+
+  .carousel-control-prev{
+    left:-40px;
+  }
+
+   .carousel-control-next{
+    right:-40px;
+  }
 
 
 /* Animações  */
@@ -215,26 +240,43 @@ section {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  width: 700px;/* Definir um tamanho máximo para não quebrar */
-  margin: auto; /* Centraliza dentro do slide */
+  width: 700px;
+  margin: auto; 
 }
 
 .swiper {
   width: 100%;
-  max-width: 800px; /* Evita que o carrossel fique muito grande */
+  padding-bottom: 40px; 
   margin: auto;
 }
 
 .swiper-slide {
   display: flex;
-  justify-content: center; /* Centraliza o card */
+  justify-content: center; 
 }
 
-.swiper-button-next, .swiper-button-prev {
-  color: rgb(0, 255, 0) !important; /* Deixa os botões visíveis */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px !important; 
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  opacity: 0.5;
+  margin: 0 5px;
+  transition: all 0.3s ease;
 }
 
 
+.swiper-pagination-bullet-active {
+    background-color: #00ff00!important; 
+    opacity: 1;
+}
 
 .card-projects
 {
@@ -247,6 +289,7 @@ section {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     min-height:400px;
     max-height:401px;
+    width:100%;
 }
 
 .card:hover {
@@ -273,7 +316,9 @@ section {
 @media (max-width:768px)
 {
 
-  
+  .card-exp{
+    width:100%;
+  }
   
   body
   {

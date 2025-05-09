@@ -26,10 +26,6 @@ titulo.addEventListener("mouseleave", () => {
 
 const swiper = new Swiper(".mySwiper", {
   loop: true,
-  navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-  },
   pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -39,6 +35,31 @@ const swiper = new Swiper(".mySwiper", {
       disableOnInteraction: false,
   },
   speed: 500,
+});
+
+const swiperProjects = new Swiper(".mySwiperProjects", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    speed: 500,
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 40
+        }
+    }
 });
 
  
@@ -232,6 +253,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
  
-
+    document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.querySelector('#projectsCarousel');
+        const carouselInstance = new bootstrap.Carousel(carousel, {
+            interval: 3000,
+            wrap: true,
+            touch: true
+        });
+        
+        carousel.addEventListener('mouseenter', function() {
+            carouselInstance.pause();
+        });
+        
+        carousel.addEventListener('mouseleave', function() {
+            carouselInstance.cycle();
+        });
+    });
 
 
