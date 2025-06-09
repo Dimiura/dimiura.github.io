@@ -84,14 +84,14 @@ const App = (function () {
         return { init };
     })();
 
-    // Módulo para o efeito de digitação no elemento com id="titulo"
+   
     const TypingEffect = (function () {
         const titles = ["Diego Miura Fogacio", "Front-End Developer"];
-        let index = 0; // Índice do título atual
-        let charIndex = 0; // Índice do caractere atual
-        const typingSpeed = 100; // Velocidade de digitação (ms)
-        const deletingSpeed = 50; // Velocidade de apagamento (ms)
-        const pauseDuration = 1000; // Pausa entre digitar e apagar (ms)
+        let index = 0; 
+        let charIndex = 0; 
+        const typingSpeed = 100; 
+        const deletingSpeed = 50;
+        const pauseDuration = 1000; 
         const titleElement = document.getElementById("titulo");
 
         const type = () => {
@@ -116,7 +116,7 @@ const App = (function () {
             charIndex--;
 
             if (charIndex < 0) {
-                index = (index + 1) % titles.length; // Alterna para o próximo título
+                index = (index + 1) % titles.length; 
                 charIndex = 0;
                 setTimeout(type, pauseDuration);
             } else {
@@ -131,7 +131,6 @@ const App = (function () {
         return { init };
     })();
 
-    // Módulo para destacar links de navegação ativos com base na seção visível
     const NavActive = (function () {
         const updateActiveLink = () => {
             const sections = document.querySelectorAll("section");
@@ -141,7 +140,6 @@ const App = (function () {
                 const sectionTop = section.getBoundingClientRect().top;
                 const sectionHeight = section.offsetHeight;
 
-                // Verifica se a seção está no meio da tela
                 if (sectionTop <= window.innerHeight / 2 && sectionTop + sectionHeight > window.innerHeight / 2) {
                     navLinks.forEach(link => {
                         link.classList.remove('active');
@@ -163,7 +161,6 @@ const App = (function () {
         return { init };
     })();
 
-    // Módulo para animações de cards na seção de experiência (classe .experience-card)
     const ExperienceCards = (function () {
         const init = () => {
             const cards = document.querySelectorAll('.experience-card');
@@ -187,7 +184,6 @@ const App = (function () {
         return { init };
     })();
 
-    // Módulo para o efeito de partículas com particles.js
     const ParticlesEffect = (function () {
         const init = () => {
             if (!document.getElementById('particles-js')) {
@@ -275,7 +271,6 @@ const App = (function () {
         return { init };
     })();
 
-    // Módulo para animações na seção de habilidades (classe .skill-box)
     const SkillsAnimation = (function () {
         const init = () => {
             const skillBoxes = document.querySelectorAll(".skill-box");
@@ -303,7 +298,6 @@ const App = (function () {
         return { init };
     })();
 
-    // Módulo para o carrossel Bootstrap (id="projectsCarousel")
     const ProjectsCarousel = (function () {
         const init = () => {
             const carousel = document.querySelector('#projectsCarousel');
@@ -329,7 +323,6 @@ const App = (function () {
         return { init };
     })();
 
-    // Inicialização de todos os módulos
     const init = () => {
         TitleHoverEffect.init();
         SwiperModule.init();
@@ -344,7 +337,29 @@ const App = (function () {
     return { init };
 })();
 
+const buttons = document.querySelectorAll('#tab-buttons button');
+const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const tabId = button.getAttribute('data-tab');
+            contents.forEach(content => {
+                content.classList.remove('active', 'fade-in');
+                if (content.id === tabId) {
+                    content.classList.add('active');
+                    void content.offsetWidth;
+                    content.classList.add('fade-in');
+                }
+            });
+        });
+    });
+
 // Inicializa a aplicação quando o DOM estiver carregado
 document.addEventListener("DOMContentLoaded", () => {
     App.init();
 });
+
+
