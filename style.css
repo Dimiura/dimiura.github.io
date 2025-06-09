@@ -617,3 +617,46 @@ h3 {
 {
   min-height:100px;
 }
+
+.btn-resume{
+
+  background-color: rgb(0, 255, 0);
+  color:#000;
+  border-radius:10px;
+  padding:5px;
+  transition: color 0.4s ease;
+  display: inline-block;
+  position:relative;
+  overflow:hidden;
+  z-index:1;
+}
+
+.btn-resume::before{
+  content: '';
+  position:absolute;
+  top:0;
+  height: 100%;
+  left: 100%;
+  width: 100%;
+  background: white;
+  z-index:-1;
+  transition: left 0.4s ease;
+}
+
+.btn-resume:hover {
+   color: rgb(0, 0, 0); 
+}
+
+.btn-resume:hover::before{
+  left:0;
+}
+
+@media (max-width:768px){
+  section{
+    height:100%!important;
+    margin-top: 10px!important;
+    margin-bottom: 10px!important;
+    min-height:100%;
+    align-items:normal;
+  }
+}
